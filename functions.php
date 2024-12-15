@@ -10,7 +10,7 @@ function reg() {
         $email = mysqli_real_escape_string($conn, $_POST["email"]);
         $password = mysqli_real_escape_string($conn, $_POST["password"]);
 
-        $sql = "INSERT INTO members (name, email, password) VALUES ('$name', '$email', '$password')";
+        $sql = "INSERT INTO members (username, email, password) VALUES ('$username', '$email', '$password')";
 
         if (mysqli_query($conn, $sql)) {
             echo "Registration successful!";
